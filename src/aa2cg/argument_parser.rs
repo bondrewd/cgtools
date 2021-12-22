@@ -36,14 +36,10 @@ pub fn clap_app() -> App<'static, 'static> {
             .default_value("HT")
             .required(false)
             .help("Force field for RNA"),
-        Arg::with_name("verbosity")
-            .value_name("LEVEL")
+        Arg::with_name("verbose")
             .long("--verbose")
-            .short("-v")
-            .takes_value(true)
-            .possible_values(&["0", "1", "2"])
-            .default_value("0")
+            .takes_value(false)
             .required(false)
-            .help("Output verbosity level")
+            .help("Verbose mode")
     ])
 }
